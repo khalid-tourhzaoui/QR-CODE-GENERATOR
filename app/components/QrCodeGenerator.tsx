@@ -14,11 +14,7 @@ function QrCodeGenerator() {
         <CardContent className="flex-1">
           <div className="h-full flex flex-col md:flex-row gap-8">
             <div className="flex-1 space-y-6">
-              <Tabs
-                defaultValue="link"
-                className="space-y-6"
-                onValueChange={(val) => setQrType(val)}
-              >
+              <Tabs defaultValue="link" className="space-y-6" onValueChange={(val) => setQrType(val)}>
                 <TabsList className="h-10 w-full grid grid-cols-2 bg-[#057FFF] text-lg">
                   <TabsTrigger value="link" className="text-white font-bold">
                     <Link className="w-4 h-4 mr-2" />
