@@ -4,15 +4,11 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-function TabsContentEmail({
-  email,
-  setEmail,
-  subject,
-  setSubject,
-  message,
-  setMessage,
-  handleEmailInput,
-}) {
+function TabsContentEmail() {
+  const [email, setEmail] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  
   return (
     <TabsContent value="email">
       <div className="space-y-4">
@@ -55,9 +51,7 @@ function TabsContentEmail({
           />
         </div>
         <Button
-          className="py-7 px-8 bg-[#057FFF] font-bold rounded-full uppercase"
-          onClick={handleEmailInput}
-        >
+          className="py-7 px-8 bg-[#057FFF] font-bold rounded-full uppercase">
           Generate Email QR Code
         </Button>
       </div>
