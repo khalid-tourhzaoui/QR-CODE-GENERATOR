@@ -2,6 +2,17 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React from "react";
+// Define the type for the props
+interface QrCodeAttributeProps {
+  color: string;
+  setColor: React.Dispatch<React.SetStateAction<string>>;
+  bgColor: string;
+  setBgColor: React.Dispatch<React.SetStateAction<string>>;
+  logo: string | null; // Allow null here for the logo
+  setLogo: React.Dispatch<React.SetStateAction<string | null>>; // Allow null for the setter
+  logoFile: File | null;
+  setLogoFile: React.Dispatch<React.SetStateAction<File | null>>;
+}
 
 function QrCodeAttribute({
   color,
@@ -12,7 +23,7 @@ function QrCodeAttribute({
   setLogo,
   logoFile,
   setLogoFile,
-}) {
+}: QrCodeAttributeProps) {
   return (
     <div className="space-y-4">
       <div className="flex space-x-4">

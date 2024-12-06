@@ -3,8 +3,13 @@ import React from "react";
 import { TabsContent } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-function TabsContentText({ url, setUrl }) {
-  return (
+// Define the types for the props
+interface TabsContentTextProps {
+  url: string; // The URL to be used
+  setUrl: React.Dispatch<React.SetStateAction<string>>; // Function to set the URL value
+}
+
+function TabsContentText({ url, setUrl }: TabsContentTextProps) {  return (
     <TabsContent value="link">
       <div className="space-y-6">
         <div className="space-y-4">

@@ -3,8 +3,23 @@ import React from "react";
 import { Download, LayoutGrid } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import { Button } from "@/components/ui/button";
-function QrCodeLayout({ url, color, bgColor, logo, handleDownload }) {
 
+// Define the types for the props
+interface QrCodeLayoutProps {
+  url: string; // The URL to generate the QR code
+  color: string; // The color for the QR code
+  bgColor: string; // The background color for the QR code
+  logo?: string | null; // Optional logo URL to display in the center of the QR code
+  handleDownload: (format: "png" | "svg") => void; // Function to handle downloading the QR code
+}
+
+function QrCodeLayout({
+  url,
+  color,
+  bgColor,
+  logo,
+  handleDownload,
+}: QrCodeLayoutProps) {
   return (
     <div className="relative flex-1 bg-[#037FFF] rounded-lg flex flex-col justify-center space-y-6">
       <span>

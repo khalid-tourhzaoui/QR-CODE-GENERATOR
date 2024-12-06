@@ -5,6 +5,16 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+interface TabsContentEmailProps {
+  email: string;
+  setEmail: React.Dispatch<React.SetStateAction<string>>;
+  message: string;
+  setMessage: React.Dispatch<React.SetStateAction<string>>;
+  subject: string;
+  setSubject: React.Dispatch<React.SetStateAction<string>>;
+  handleEmailInput: () => void;
+}
+
 function TabsContentEmail({
   email,
   setEmail,
@@ -13,7 +23,7 @@ function TabsContentEmail({
   subject,
   setSubject,
   handleEmailInput,
-}) {
+}: TabsContentEmailProps) {
   return (
     <TabsContent value="email">
       <div className="space-y-4">

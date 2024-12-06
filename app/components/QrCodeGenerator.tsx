@@ -14,7 +14,7 @@ function QrCodeGenerator() {
   const [url, setUrl] = React.useState("");
   const [color, setColor] = React.useState("#ffffff");
   const [bgColor, setBgColor] = React.useState("#057FFF");
-  const [logo, setLogo] = React.useState<string | null>(null);
+  const [logo, setLogo] = React.useState<string | null>(null); // Allow null as the initial value
   const [logoFile, setLogoFile] = React.useState<File | null>(null);
   const [qrType, setQrType] = React.useState("link");
   const [email, setEmail] = React.useState("");
@@ -56,10 +56,17 @@ function QrCodeGenerator() {
 
   return (
     <div className="relative z-30 mx-6 my-4 flex max-w-[1250px] w-full min-h-[650px] h-full">
-      <Card className="flex-1 flex flex-col w-full h-auto mx-auto bg-[#ecf7ff]/80 backdrop-blur-md shadow-sm border-4 border-white
-      rounded-xl" style={{
-        backgroundImage:"url('https://c4.wallpaperflare.com/wallpaper/114/760/992/abstract-hexagon-digital-art-pattern-wallpaper-preview.jpg')",
-        backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundPosition:"center"}}>
+      <Card
+        className="flex-1 flex flex-col w-full h-auto mx-auto bg-[#ecf7ff]/80 backdrop-blur-md shadow-sm border-4 border-white
+      rounded-xl"
+        style={{
+          backgroundImage:
+            "url('https://c4.wallpaperflare.com/wallpaper/114/760/992/abstract-hexagon-digital-art-pattern-wallpaper-preview.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         {/* En-tête de la carte */}
         <CardHead />
 
