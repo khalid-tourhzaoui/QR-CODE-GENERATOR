@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Card, CardContent} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link, Mail } from "lucide-react";
 import { toPng } from "html-to-image";
@@ -55,8 +55,11 @@ function QrCodeGenerator() {
   };
 
   return (
-    <div className="relative z-30 mx-6 my-4 flex max-w-[1250px] w-full min-h-[750px] h-full">
-      <Card className="flex-1 flex flex-col w-full h-auto mx-auto bg-[#ecf7ff]/80 backdrop-blur-md shadow-sm border-2 border-white/40 rounded-xl">
+    <div className="relative z-30 mx-6 my-4 flex max-w-[1250px] w-full min-h-[650px] h-full">
+      <Card className="flex-1 flex flex-col w-full h-auto mx-auto bg-[#ecf7ff]/80 backdrop-blur-md shadow-sm border-4 border-white
+      rounded-xl" style={{
+        backgroundImage:"url('https://c4.wallpaperflare.com/wallpaper/114/760/992/abstract-hexagon-digital-art-pattern-wallpaper-preview.jpg')",
+        backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundPosition:"center"}}>
         {/* En-tête de la carte */}
         <CardHead />
 

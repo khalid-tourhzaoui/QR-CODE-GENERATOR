@@ -32,8 +32,8 @@ function QrCodeLayout({ url, color, bgColor, logo, handleDownload }) {
           )}
         </div>
       </div>
-      <div className="flex justify-center space-x-4 pb-6">
-        <Button variant="outline" onClick={() => handleDownload("png")}>
+      <div className="flex flex-wrap justify-center space-x-4 pb-6">
+        <Button variant="outline" onClick={() => handleDownload("png")} >
           <Download className="w-4 h-4 mr-2" />
           Download PNG
         </Button>
