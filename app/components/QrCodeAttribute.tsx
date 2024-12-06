@@ -17,8 +17,8 @@ function QrCodeAttribute({
     <div className="space-y-4">
       <div className="flex space-x-4">
         {/* Couleur QR Code */}
-        <div className="space-y-2 flex-1">
-          <Label htmlFor="color" className="font-semibold text-[#057FFF]">
+        <div className="space-y-4 flex-1">
+          <Label htmlFor="color" className="font-bold text-white text-md">
             QR Code Color
           </Label>
           <div className="flex items-center gap-1">
@@ -37,14 +37,18 @@ function QrCodeAttribute({
               type="text"
               value={color}
               onChange={(e) => setColor(e.target.value)}
-              className="flex-1 border-2 h-12 bg-transparent border-white/70 focus:border-[#057FFF]/70 rounded-md outline-none focus-visible:ring-0 placeholder:text-gray-400"
+              className="flex-1 w-full h-12 placeholder:font-bold bg-white border-2 border-[#057FFF] outline-none focus-visible:ring-0 
+              rounded-md border-r-[7px] border-l-[7px] placeholder:text-md placeholder:text-black"
             />
           </div>
         </div>
 
         {/* Couleur d'arrière-plan */}
-        <div className="space-y-2 flex-1">
-          <Label htmlFor="bgColor" className="font-semibold text-[#057FFF]">
+        <div className="space-y-4 flex-1">
+          <Label
+            htmlFor="bgColor"
+            className="font-bold text-white text-md"
+          >
             Background Color
           </Label>
           <div className="flex items-center gap-1">
@@ -63,15 +67,16 @@ function QrCodeAttribute({
               type="text"
               value={bgColor}
               onChange={(e) => setBgColor(e.target.value)}
-              className="flex-1 border-2 h-12 bg-transparent border-white/70 focus:border-[#057FFF]/70 rounded-md outline-none focus-visible:ring-0 placeholder:text-gray-400"
+              className="flex-1 w-full h-12 placeholder:font-bold bg-white border-2 border-[#057FFF] outline-none focus-visible:ring-0 
+              rounded-md border-r-[7px] border-l-[7px] placeholder:text-md placeholder:text-black"
             />
           </div>
         </div>
       </div>
 
       {/* Logo */}
-      <div className="space-y-2">
-        <Label htmlFor="logo" className="font-bold text-[#037FFF]">
+      <div className="space-y-4">
+        <Label htmlFor="logo" className="font-bold text-white text-md">
           Logo
         </Label>
         <Input
@@ -88,7 +93,8 @@ function QrCodeAttribute({
               reader.readAsDataURL(e.target.files[0]);
             }
           }}
-          className="w-full border-2 bg-transparent border-white/70 focus:border-[#057FFF]/70 rounded-md outline-none focus-visible:ring-0 placeholder:text-gray-400"
+          className="w-full h-12 placeholder:font-bold bg-white border-2 border-[#057FFF] outline-none focus-visible:ring-0 
+              rounded-md border-r-[7px] border-l-[7px] placeholder:text-md placeholder:text-black"
         />
       </div>
     </div>

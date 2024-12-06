@@ -7,8 +7,8 @@ function TabsContentText({ url, setUrl }) {
   return (
     <TabsContent value="link">
       <div className="space-y-6">
-        <div className="space-y-2">
-          <Label htmlFor="url" className="font-semibold text-[#057FFF] text-xl">
+        <div className="space-y-4">
+          <Label htmlFor="url" className="font-bold text-white text-md">
             Link
           </Label>
           <Input
@@ -17,9 +17,8 @@ function TabsContentText({ url, setUrl }) {
             value={url}
             placeholder="https://example.com"
             onChange={(e) => setUrl(e.target.value)}
-            className="w-full border-4 bg-transparent border-[#057FFF] focus:border-white/70  outline-none 
-                      focus-visible:ring-0 placeholder:text-[#000000] placeholder:font-semibold rounded-md border-r-[5px] border-l-[5px]
-                      shadow-[5px_5px_5px_#FFFFFF]"/>
+            className="w-full h-12 placeholder:font-bold bg-white border-2 border-[#057FFF] outline-none focus-visible:ring-0 rounded-md 
+            border-r-[7px] border-l-[7px] placeholder:text-md placeholder:text-black"/>
         </div>
       </div>
     </TabsContent>

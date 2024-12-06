@@ -19,45 +19,48 @@ function TabsContentEmail({
       <div className="space-y-4">
         {/* Email */}
         <div className="space-y-2">
-          <Label htmlFor="email" className="font-semibold text-[#057FFF]">
+          <Label htmlFor="email" className="font-bold text-white text-md">
             Email
           </Label>
           <Input
             id="email"
             type="email"
             value={email}
-            placeholder="Enter email"
+            placeholder="Enter your email"
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border-2 bg-transparent border-white/70 focus:border-[#057FFF]/70 rounded-md outline-none focus-visible:ring-0 placeholder:text-gray-400"
+            className="w-full h-12 placeholder:font-bold bg-white border-2 border-[#057FFF] outline-none focus-visible:ring-0 rounded-md 
+            border-r-[7px] border-l-[7px] placeholder:text-md placeholder:text-black"
           />
         </div>
 
         {/* Sujet */}
         <div className="space-y-2">
-          <Label htmlFor="subject" className="font-semibold text-[#057FFF]">
+          <Label htmlFor="subject" className="font-bold text-white text-md">
             Subject
           </Label>
           <Input
             id="subject"
             type="text"
             value={subject}
-            placeholder="Enter subject"
+            placeholder="Enter your subject"
             onChange={(e) => setSubject(e.target.value)}
-            className="w-full border-2 bg-transparent border-white/70 focus:border-[#057FFF]/70 rounded-md outline-none focus-visible:ring-0 placeholder:text-gray-400"
+            className="w-full h-12 placeholder:font-bold bg-white border-2 border-[#057FFF] outline-none focus-visible:ring-0 rounded-md 
+            border-r-[7px] border-l-[7px] placeholder:text-md placeholder:text-black"
           />
         </div>
 
         {/* Message */}
         <div className="space-y-2">
-          <Label htmlFor="message" className="font-semibold text-[#057FFF]">
+          <Label htmlFor="message" className="font-bold text-white text-md">
             Message
           </Label>
           <Textarea
             id="message"
             value={message}
-            placeholder="Enter message"
+            placeholder="Enter your message"
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full border-2 bg-transparent border-white/70 focus:border-[#057FFF]/70 rounded-md outline-none focus-visible:ring-0 placeholder:text-gray-400 h-24 resize-none"
+            className="w-full placeholder:font-bold bg-white border-2 border-[#057FFF] outline-none focus-visible:ring-0 rounded-md 
+            border-r-[7px] border-l-[7px] placeholder:text-md placeholder:text-black h-24 resize-none"
           />
         </div>
 

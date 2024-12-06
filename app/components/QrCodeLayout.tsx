@@ -32,7 +32,7 @@ function QrCodeLayout({ url, color, bgColor, logo, handleDownload }) {
           )}
         </div>
       </div>
-      <div className="flex flex-wrap justify-center space-x-4 pb-6">
+      {/* <div className="flex justify-center  space-x-4 pb-2">
         <Button variant="outline" onClick={() => handleDownload("png")} >
           <Download className="w-4 h-4 mr-2" />
           Download PNG
@@ -41,7 +41,26 @@ function QrCodeLayout({ url, color, bgColor, logo, handleDownload }) {
           <Download className="w-4 h-4 mr-2" />
           Download SVG
         </Button>
+      </div> */}
+      <div className="flex justify-center flex-wrap gap-4 pb-2">
+        <Button
+          variant="outline"
+          className="w-full md:w-auto px-4 py-2 text-sm md:text-base flex items-center justify-center gap-2 hover:shadow-lg focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+          onClick={() => handleDownload("png")}
+        >
+          <Download className="w-5 h-5 mr-2" />
+          Download PNG
+        </Button>
+        <Button
+          variant="outline"
+          className="w-full md:w-auto px-4 py-2 text-sm md:text-base flex items-center justify-center gap-2 hover:shadow-lg focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+          onClick={() => handleDownload("svg")}
+        >
+          <Download className="w-5 h-5 mr-2" />
+          Download SVG
+        </Button>
       </div>
+
     </div>
   );
 }
